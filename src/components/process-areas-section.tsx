@@ -41,7 +41,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-[25px] grid grid-cols-[minmax(35px,1fr)_auto_minmax(35px,1fr)] items-center gap-4">
       <span className="h-0.5 bg-(--color-accent)" />
-      <h2 className="text-center font-display text-[clamp(2rem,4vw,3rem)] italic leading-none text-[#232323]">
+      <h2 className="text-center font-display text-[clamp(1.5rem,2.6vw,2.1rem)] font-extrabold uppercase leading-none text-[#232323]">
         {children}
       </h2>
       <span className="h-0.5 bg-(--color-accent)" />

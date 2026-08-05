@@ -9,7 +9,7 @@ export function ContactSection() {
           <p className="mb-0 font-extrabold uppercase tracking-[0.03em] text-[#8d7400]">
             Fast, friendly local service
           </p>
-          <h2 className="max-w-[570px] font-display text-[clamp(3rem,6vw,5rem)] italic leading-[0.93] text-[#161616]">
+          <h2 className="max-w-[570px] font-display text-[clamp(1.8rem,3.2vw,2.6rem)] font-extrabold leading-[1.15] text-[#161616]">
             Ready to Reclaim Your Space?
           </h2>
           <p className="my-[18px] mb-7 text-[1.15rem] text-[#161616]">
@@ -35,7 +35,7 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="mt-[22px] text-left font-display text-[1.35rem] italic leading-[1.05] text-[#222222] md:absolute md:bottom-0 md:right-[18px] md:mt-0 md:-rotate-6 md:text-center">
+          <div className="mt-[22px] text-left font-display text-[1.1rem] font-extrabold leading-[1.15] text-[#222222] md:absolute md:bottom-0 md:right-[18px] md:mt-0 md:-rotate-6 md:text-center">
             Send us photos
             <br />
             for faster estimates.

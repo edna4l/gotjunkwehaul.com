@@ -1,8 +1,12 @@
 import Image from "next/image";
-import { MapPin, MessageSquare, Phone } from "lucide-react";
+import { Award, Building2, MapPin, MessageSquare, Phone, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const TRUST_ITEMS = ["Local & Reliable", "Free Estimates", "Residential & Commercial"];
+const TRUST_ITEMS = [
+  { label: "Local & Reliable", Icon: ShieldCheck },
+  { label: "Free Estimates", Icon: Award },
+  { label: "Residential & Commercial", Icon: Building2 },
+];
 
 export function Hero() {
   return (
@@ -22,16 +26,14 @@ export function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.45),transparent_34%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.65)_53%,rgba(0,0,0,0.15)_100%)] md:hidden" />
 
-      <div className="relative z-10 mx-auto w-[min(calc(100%-40px),var(--container-max))] py-[90px] pb-[35px] md:py-[76px] md:pb-[38px]">
+      <div className="relative z-10 w-full px-6 py-[90px] pb-[35px] sm:px-10 md:py-[76px] md:pb-[38px] lg:px-16">
         <p className="mb-[11px] text-[0.85rem] font-extrabold uppercase tracking-[0.17em] text-(--color-accent)">
           Local junk removal &amp; hauling
         </p>
 
-        <h1 className="max-w-[690px] font-display text-[clamp(3.8rem,10vw,7.6rem)] italic leading-[0.82] text-white [text-shadow:0_7px_22px_rgba(0,0,0,0.55)]">
+        <h1 className="max-w-[690px] font-display text-[clamp(2.4rem,5.5vw,4.4rem)] font-extrabold leading-[1.05] text-white [text-shadow:0_7px_22px_rgba(0,0,0,0.55)]">
           <span className="block">Got Junk?</span>
-          <span className="block font-normal text-(--color-accent)">
-            We&rsquo;ll Haul It Away.
-          </span>
+          <span className="block text-(--color-accent)">We&rsquo;ll Haul It Away.</span>
         </h1>
 
         <p className="mb-[15px] mt-[27px] max-w-[560px] text-[clamp(1rem,1.6vw,1.18rem)] font-medium leading-[1.55] text-[#f4f4f4]">
@@ -60,9 +62,10 @@ export function Hero() {
           aria-label="Business benefits"
           className="mt-[29px] grid gap-2.5 text-[0.92rem] font-semibold text-[#f4f4f4] sm:flex sm:flex-wrap sm:gap-[25px]"
         >
-          {TRUST_ITEMS.map((item) => (
-            <span key={item} className="first-letter:text-(--color-accent)">
-              ✔ {item}
+          {TRUST_ITEMS.map(({ label, Icon }) => (
+            <span key={label} className="flex items-center gap-2">
+              <Icon className="h-[18px] w-[18px] text-(--color-accent)" aria-hidden="true" />
+              {label}
             </span>
           ))}
         </div>

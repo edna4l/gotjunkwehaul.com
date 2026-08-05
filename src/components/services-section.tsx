@@ -55,7 +55,7 @@ export function ServicesSection() {
       <div className="mx-auto w-[min(calc(100%-40px),var(--container-max))]">
         <div className="mb-[25px] grid grid-cols-[minmax(35px,1fr)_auto_minmax(35px,1fr)] items-center gap-4">
           <span className="h-0.5 bg-(--color-accent)" />
-          <h2 className="text-center font-display text-[clamp(2rem,4vw,3rem)] italic leading-none text-white">
+          <h2 className="text-center font-display text-[clamp(1.5rem,2.6vw,2.1rem)] font-extrabold uppercase leading-none text-white">
             Our Services
           </h2>
           <span className="h-0.5 bg-(--color-accent)" />
@@ -65,7 +65,7 @@ export function ServicesSection() {
           {SERVICES.map(({ title, description, image, alt, Icon }) => (
             <article
               key={title}
-              className="overflow-hidden rounded-[9px] border border-(--color-border) bg-gradient-to-b from-[#202020] to-[#0e0e0e] shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-1.5 hover:border-(--color-accent)"
+              className="overflow-hidden rounded-[9px] border-2 border-black bg-gradient-to-b from-[#202020] to-[#0e0e0e] shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-1.5 hover:border-(--color-accent)"
             >
               <div className="relative aspect-[4/3]">
                 <Image

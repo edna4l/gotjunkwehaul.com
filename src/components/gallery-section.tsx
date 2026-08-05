@@ -28,8 +28,8 @@ export function GallerySection() {
       <div className="mx-auto w-[min(calc(100%-40px),var(--container-max))]">
         <div className="mb-[25px] grid grid-cols-[minmax(35px,1fr)_auto_minmax(35px,1fr)] items-center gap-4">
           <span className="h-0.5 bg-(--color-accent)" />
-          <h2 className="text-center font-display text-[clamp(2rem,4vw,3rem)] italic leading-none text-white">
-            Gallery <em className="font-normal not-italic text-(--color-accent)">Before &amp; After</em>
+          <h2 className="text-center font-display text-[clamp(1.5rem,2.6vw,2.1rem)] font-extrabold uppercase leading-none text-white">
+            Gallery <em className="not-italic text-(--color-accent)">Before &amp; After</em>
           </h2>
           <span className="h-0.5 bg-(--color-accent)" />
         </div>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+const poppins = Poppins({
+  weight: ["700", "800"],
   subsets: ["latin"],
-  variable: "--font-bebas-neue",
+  variable: "--font-poppins",
 });
 
 const inter = Inter({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

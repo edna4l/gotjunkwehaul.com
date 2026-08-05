@@ -23,7 +23,7 @@ export function SiteHeader() {
         <a
           href="#home"
           aria-label="Got Junk home"
-          className="inline-flex shrink-0 items-baseline gap-2 font-display text-[clamp(2.15rem,4vw,3.2rem)] italic leading-[0.9]"
+          className="inline-flex shrink-0 items-baseline gap-1.5 font-display text-[clamp(1.4rem,2.2vw,1.9rem)] font-extrabold leading-[0.9]"
         >
           <span className="text-white">Got</span>
           <span className="text-(--color-accent)">Junk</span>
