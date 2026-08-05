@@ -1,4 +1,9 @@
-import { ArrowRight, Camera, DollarSign, MapPin, Truck } from "lucide-react";
+import { ArrowRight, Camera, DollarSign, Truck } from "lucide-react";
+import { CALIFORNIA_OUTLINE_PATH, CALIFORNIA_OUTLINE_VIEWBOX } from "@/components/california-outline";
+
+// Approximate position of Corcoran within the outline's coordinate space
+// (equirectangular-ish trace, so this is an eyeballed placement, not survey-accurate).
+const SERVICE_AREA_PIN = { x: 7476, y: 10200 };
 
 const STEPS = [
   {
@@ -82,18 +87,23 @@ export function ProcessAreasSection() {
 
           <div className="grid grid-cols-1 items-center gap-[27px] md:grid-cols-[0.75fr_1.2fr]">
             <div
-              aria-label="Central California service area illustration"
-              className="relative grid min-h-[190px] place-items-center overflow-hidden rounded-[18%_42%_33%_21%/23%_30%_55%_43%] bg-[#ecece8] text-[#b9b9b9] md:min-h-[230px]"
+              aria-label="Map of California showing our Central Valley service area"
+              className="grid min-h-[190px] place-items-center rounded-[18px] bg-[#ecece8] p-6 md:min-h-[230px]"
             >
-              <span className="font-display text-[5.5rem] tracking-[0.08em] text-[#c6c6bf]">
-                CA
-              </span>
-              <MapPin
-                className="absolute left-[44%] top-[52%] h-[34px] w-[34px] -rotate-45 rounded-bl-none text-[#111111]"
-                fill="var(--color-accent)"
+              <svg
+                viewBox={CALIFORNIA_OUTLINE_VIEWBOX}
+                className="h-full w-full max-w-[220px]"
                 aria-hidden="true"
-              />
-              <p className="absolute bottom-3.5 font-bold text-[#444444]">Central Valley</p>
+              >
+                <path d={CALIFORNIA_OUTLINE_PATH} fill="#c6c6bf" />
+                <circle cx={SERVICE_AREA_PIN.x} cy={SERVICE_AREA_PIN.y} r={3400} fill="#ffffff" />
+                <circle
+                  cx={SERVICE_AREA_PIN.x}
+                  cy={SERVICE_AREA_PIN.y}
+                  r={2100}
+                  fill="var(--color-accent)"
+                />
+              </svg>
             </div>
 
             <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">

@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[670px] items-end overflow-hidden md:min-h-[560px] md:items-center"
+      className="relative flex aspect-[4/5] items-end overflow-hidden md:aspect-[1800/535] md:min-h-[680px] md:items-center"
     >
       <Image
         src="/images/hero.jpg"
@@ -18,9 +18,9 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-[67%_center] md:object-center"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.97)_0%,rgba(0,0,0,0.78)_39%,rgba(0,0,0,0.18)_72%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.56),transparent_34%),radial-gradient(circle_at_82%_36%,transparent_0_28%,rgba(0,0,0,0.14)_70%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.8)_53%,rgba(0,0,0,0.2)_100%)] md:hidden" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.65)_39%,rgba(0,0,0,0.1)_72%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.45),transparent_34%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.65)_53%,rgba(0,0,0,0.15)_100%)] md:hidden" />
 
       <div className="relative z-10 mx-auto w-[min(calc(100%-40px),var(--container-max))] py-[90px] pb-[35px] md:py-[76px] md:pb-[38px]">
         <p className="mb-[11px] text-[0.85rem] font-extrabold uppercase tracking-[0.17em] text-(--color-accent)">
