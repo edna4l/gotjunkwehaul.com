@@ -11,7 +11,7 @@
   --color-gray: #b8b8b8;
   --color-border: rgba(255, 255, 255, 0.22);
   --shadow-card: 0 16px 38px rgba(0, 0, 0, 0.24);
-  --container-max: 1240px;
+  --container-max: 1680px;
 }
 
 @theme inline {
