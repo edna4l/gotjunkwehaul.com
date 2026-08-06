@@ -146,17 +146,6 @@ export function EstimateForm() {
             : "Request sent — we got it through at least one channel and will follow up shortly.")}
         {status.state === "error" && status.message}
       </p>
-
-      <p className="text-sm text-[#666666]">
-        Prefer texting?{" "}
-        <a
-          href="sms:+15593814910?body=Hi%20Got%20Junk!%20I%27d%20like%20a%20free%20estimate.%20I%27ll%20send%20photos%20here."
-          className="font-bold text-[#b08d00]"
-        >
-          Text us directly
-        </a>{" "}
-        and attach photos from your phone.
-      </p>
     </form>
   );
 }

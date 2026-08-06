@@ -19,7 +19,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 min-h-[74px] border-b border-(--color-accent)/15 bg-black/96 backdrop-blur-md">
-      <div className="mx-auto flex min-h-[74px] w-[calc(100%-40px)] items-center gap-[30px]">
+      <div className="mx-auto flex min-h-[74px] w-[calc(100%-40px)] items-center gap-[30px] md:justify-between">
         <a
           href="#home"
           aria-label="Got Junk home"
@@ -44,7 +44,7 @@ export function SiteHeader() {
           id="main-navigation"
           aria-label="Main navigation"
           className={cn(
-            "absolute left-5 right-5 top-[67px] flex-col gap-0 rounded-[10px] border border-white/16 bg-[#101010] p-2 shadow-[var(--shadow-card)] md:static md:left-auto md:right-auto md:top-auto md:ml-auto md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none",
+            "absolute left-5 right-5 top-[67px] flex-col gap-0 rounded-[10px] border border-white/16 bg-[#101010] p-2 shadow-[var(--shadow-card)] md:static md:left-auto md:right-auto md:top-auto md:ml-0 md:flex md:flex-row md:items-center md:gap-4 md:border-0 md:bg-transparent md:p-0 md:shadow-none lg:gap-8",
             isOpen ? "flex" : "hidden"
           )}
         >
@@ -53,14 +53,14 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="relative px-3 py-[13px] text-[0.91rem] font-bold text-[#f1f1f1] after:absolute after:bottom-[-10px] after:left-0 after:right-full after:h-[3px] after:bg-(--color-accent) after:transition-[right] after:duration-150 hover:after:right-0 md:px-0 md:py-0"
+              className="relative px-3 py-[13px] text-[0.91rem] font-bold text-[#f1f1f1] after:absolute after:bottom-[-10px] after:left-0 after:right-full after:h-[3px] after:bg-(--color-accent) after:transition-[right] after:duration-150 hover:after:right-0 md:px-0 md:py-0 md:text-[0.95rem] lg:text-[1.2rem]"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-[18px] md:ml-0">
+        <div className="flex items-center gap-[18px]">
           <a
             href="tel:+15593814910"
             aria-label="Call Got Junk"
