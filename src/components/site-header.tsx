@@ -19,7 +19,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 min-h-[74px] border-b border-(--color-accent)/15 bg-black/96 backdrop-blur-md">
-      <div className="mx-auto flex min-h-[74px] w-[min(calc(100%-40px),var(--container-max))] items-center gap-[30px]">
+      <div className="mx-auto flex min-h-[74px] w-[calc(100%-40px)] items-center gap-[30px]">
         <a
           href="#home"
           aria-label="Got Junk home"

@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex aspect-[4/5] items-end overflow-hidden md:aspect-[1800/535] md:min-h-[680px] md:items-center"
+      className="relative flex w-full aspect-[4/5] items-end overflow-hidden md:aspect-[1800/535] md:min-h-[680px] md:items-center"
     >
       <Image
         src="/images/hero.jpg"

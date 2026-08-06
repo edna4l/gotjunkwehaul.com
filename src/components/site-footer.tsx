@@ -3,7 +3,7 @@ import { Camera, Phone } from "lucide-react";
 export function SiteFooter() {
   return (
     <footer className="border-t border-(--color-accent)/25 bg-[#050505] py-[25px] text-white">
-      <div className="mx-auto grid w-[min(calc(100%-40px),var(--container-max))] grid-cols-1 items-center gap-[18px] sm:grid-cols-2 lg:grid-cols-[1.05fr_1.25fr_0.9fr_auto] lg:gap-[35px]">
+      <div className="mx-auto grid w-[calc(100%-40px)] grid-cols-1 items-center gap-[18px] sm:grid-cols-2 lg:grid-cols-[1.05fr_1.25fr_0.9fr_auto] lg:gap-[35px]">
         <div>
           <div className="inline-flex items-baseline gap-1.5 font-display text-[1.7rem] font-extrabold leading-[0.9]">
             <span className="text-white">Got</span>

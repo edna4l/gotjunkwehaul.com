@@ -25,7 +25,7 @@ export function GallerySection() {
       id="gallery"
       className="bg-[radial-gradient(circle_at_50%_100%,#292929_0%,#0d0d0d_58%)] py-9 pb-12 text-white"
     >
-      <div className="mx-auto w-[min(calc(100%-40px),var(--container-max))]">
+      <div className="mx-auto w-[calc(100%-40px)]">
         <div className="mb-[25px] grid grid-cols-[minmax(35px,1fr)_auto_minmax(35px,1fr)] items-center gap-4">
           <span className="h-0.5 bg-(--color-accent)" />
           <h2 className="text-center font-display text-[clamp(1.5rem,2.6vw,2.1rem)] font-extrabold uppercase leading-none text-white">

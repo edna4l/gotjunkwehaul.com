@@ -4,7 +4,7 @@ import { EstimateForm } from "@/components/estimate-form";
 export function ContactSection() {
   return (
     <section id="contact" className="bg-[#f6f6f4] py-[42px]">
-      <div className="mx-auto grid w-[min(calc(100%-40px),var(--container-max))] grid-cols-1 items-center gap-[50px] md:grid-cols-[0.85fr_1.15fr]">
+      <div className="mx-auto grid w-[calc(100%-40px)] grid-cols-1 items-center gap-[50px] md:grid-cols-[0.85fr_1.15fr]">
         <div className="relative border-b border-[#cfcfcf] pb-9 md:border-b-0 md:border-r md:pb-0 md:pr-9">
           <p className="mb-0 font-extrabold uppercase tracking-[0.03em] text-[#8d7400]">
             Fast, friendly local service

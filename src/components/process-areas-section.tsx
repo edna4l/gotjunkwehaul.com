@@ -52,7 +52,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 export function ProcessAreasSection() {
   return (
     <section id="about" className="bg-(--color-paper) text-[#171717]">
-      <div className="mx-auto grid w-[min(calc(100%-40px),var(--container-max))] grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto grid w-[calc(100%-40px)] grid-cols-1 md:grid-cols-2">
         <div className="border-b border-[#d3d3d3] py-9 pb-9 md:border-b-0 md:border-r md:py-[34px] md:pb-10">
           <SectionTitle>How It Works</SectionTitle>
 
