@@ -137,7 +137,8 @@ export async function POST(request: Request) {
 
   const [email, sms] = await Promise.all([sendEmail(fields, photos), sendSms(fields)]);
 
-  if (email === "failed" && sms === "failed") {
+  const delivered = email === "sent" || sms === "sent";
+  if (!delivered) {
     return NextResponse.json(
       { ok: false, email, sms, message: "We couldn't send your request. Please call or text us directly." },
       { status: 502 }
