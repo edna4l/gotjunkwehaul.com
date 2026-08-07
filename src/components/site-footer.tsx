@@ -1,4 +1,22 @@
-import { Camera, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 
 export function SiteFooter() {
   return (
@@ -44,11 +62,13 @@ export function SiteFooter() {
             f
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/gotjunk559/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
             className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white text-[#111111]"
           >
-            <Camera className="h-[18px] w-[18px]" aria-hidden="true" />
+            <InstagramIcon className="h-[18px] w-[18px]" aria-hidden="true" />
           </a>
         </div>
       </div>
