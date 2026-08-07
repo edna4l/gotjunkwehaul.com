@@ -35,7 +35,9 @@ export function SiteFooter() {
 
         <div aria-label="Social media links" className="mt-1 flex gap-2.5 sm:mt-0">
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=61586970762693"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Facebook"
             className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white text-[1.15rem] font-black text-[#111111]"
           >
