@@ -1,5 +1,6 @@
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone, Star } from "lucide-react";
 import { EstimateForm } from "@/components/estimate-form";
+import { GOOGLE_MAPS_EMBED_SRC, GOOGLE_MAPS_REVIEWS_URL } from "@/lib/constants";
 
 export function ContactSection() {
   return (
@@ -35,6 +36,18 @@ export function ContactSection() {
             </p>
           </div>
 
+          <a
+            href={GOOGLE_MAPS_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-1.5 font-bold text-[#161616] underline decoration-[#cfcfcf] underline-offset-4 hover:text-[#b08d00]"
+          >
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Star key={index} className="h-4 w-4 fill-(--color-accent) text-(--color-accent)" aria-hidden="true" />
+            ))}
+            Read our reviews on Google
+          </a>
+
           <div className="mt-7 max-w-[640px] font-display text-[clamp(1.3rem,2.4vw,2rem)] font-extrabold leading-[1.2] text-[#222222]">
             Send us photos for faster estimates.
           </div>
@@ -49,6 +62,14 @@ export function ContactSection() {
             </a>{" "}
             and attach photos from your phone.
           </p>
+
+          <iframe
+            src={GOOGLE_MAPS_EMBED_SRC}
+            title="Got Junk location on Google Maps"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="mt-7 h-[220px] w-full max-w-[640px] rounded-[18px] border-0"
+          />
         </div>
 
         <EstimateForm />
