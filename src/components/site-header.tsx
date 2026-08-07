@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FacebookIcon, InstagramIcon } from "@/components/social-icons";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -58,9 +60,49 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
+          <div className="mt-1 flex items-center gap-2.5 border-t border-white/10 px-3 pt-3 md:hidden">
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-white"
+            >
+              <FacebookIcon className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/25 text-white"
+            >
+              <InstagramIcon className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
         </nav>
 
         <div className="flex items-center gap-[18px]">
+          <div className="hidden items-center gap-2 xl:flex">
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="grid h-8 w-8 place-items-center rounded-full border border-white/25 text-white/80 hover:border-(--color-accent) hover:text-(--color-accent)"
+            >
+              <FacebookIcon className="h-[15px] w-[15px]" aria-hidden="true" />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="grid h-8 w-8 place-items-center rounded-full border border-white/25 text-white/80 hover:border-(--color-accent) hover:text-(--color-accent)"
+            >
+              <InstagramIcon className="h-[15px] w-[15px]" aria-hidden="true" />
+            </a>
+          </div>
           <a
             href="tel:+15593814910"
             aria-label="Call Got Junk"

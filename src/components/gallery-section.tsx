@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "@/lib/constants";
 
 const GALLERY_ITEMS = [
   { image: "/images/gallery-yard.jpg", alt: "Yard cleanup before and after", caption: "Yard Cleanup" },
@@ -55,6 +56,28 @@ export function GallerySection() {
             </figure>
           ))}
         </div>
+
+        <p className="mt-6 text-center text-[0.92rem] text-[#cfcfcf]">
+          See more before &amp; after jobs on{" "}
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-(--color-accent) hover:underline"
+          >
+            Instagram
+          </a>{" "}
+          and{" "}
+          <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-(--color-accent) hover:underline"
+          >
+            Facebook
+          </a>
+          .
+        </p>
       </div>
     </section>
   );
