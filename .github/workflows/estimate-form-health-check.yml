@@ -1,0 +1,44 @@
+name: Estimate form health check
+
+on:
+  schedule:
+    # 15:00 UTC = ~7-8am Pacific, once a day
+    - cron: "0 15 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit a real test request and verify delivery
+        run: |
+          set -uo pipefail
+
+          status=$(curl -sS --retry 2 --retry-delay 5 --max-time 30 \
+            -o response.json -w "%{http_code}" \
+            -X POST "https://www.gotjunkwehaul.com/api/estimate" \
+            -F "name=Automated Health Check - please ignore" \
+            -F "phone=5595550100" \
+            -F "message=Automated daily test confirming the estimate form can still deliver requests. No action needed.")
+          curl_exit=$?
+
+          echo "HTTP status: $status"
+          echo "Response body:"
+          cat response.json 2>/dev/null || echo "(no response body captured)"
+
+          if [ "$curl_exit" -ne 0 ]; then
+            echo "::error::Could not reach gotjunkwehaul.com at all (curl exit code $curl_exit)"
+            exit 1
+          fi
+
+          if [ "$status" != "200" ]; then
+            echo "::error::Estimate form returned HTTP $status instead of 200"
+            exit 1
+          fi
+
+          if ! grep -q '"ok":true' response.json; then
+            echo "::error::Estimate form responded but delivery failed: $(cat response.json)"
+            exit 1
+          fi
+
+          echo "Health check passed - the estimate form delivered successfully."
